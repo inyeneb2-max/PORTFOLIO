@@ -46,6 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const sub = document.getElementById('wa-subject').value;
         const msg = document.getElementById('wa-message').value;
         const text = encodeURIComponent(`*Subject:* ${sub}\n*Message:* ${msg}`);
-        window.open(`https://wa.me/${"07039068285"}?text=${text}`, '_blank');
+        window.open(`https://wa.me/${"+2347039068285"}?text=${text}`, '_blank');
     };
 });
