@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;900&display=swap');
+
+body { font-family: 'Space Grotesk', sans-serif; scroll-behavior: smooth; }
+
+html { scroll-behavior: smooth; }
+
+/* REVEAL SYSTEM */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.active { opacity: 1; transform: translateY(0); }
+
+/* SERVICE BOXES */
+.service-box {
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.service-box:hover {
+    background: #000; color: #fff;
+    transform: translateY(-5px);
+}
+.dark .service-box:hover {
+    background: #fff; color: #000;
+}
+
+/* SKILL BARS & PULSE */
+.skill-track { width: 100%; height: 2px; background: rgba(128,128,128,0.2); overflow: hidden; }
+.skill-bar { height: 100%; width: 0; background: currentColor; transition: width 2s cubic-bezier(0.16, 1, 0.3, 1); }
+
+@keyframes breathe {
+    0%, 100% { opacity: 1; transform: scaleX(1); }
+    50% { opacity: 0.6; transform: scaleX(0.99); }
+}
+.skill-item.active .skill-bar { animation: breathe 4s ease-in-out infinite; }
+
+/* BOUNCE THEME TOGGLE */
+@keyframes bounceIn {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.bounce { animation: bounceIn 0.5s ease; }
+
+/* Stagger the projects on large screens */
+@media (min-width: 768px) {
+    .project-card:nth-child(even) {
+        margin-top: 5rem; /* Creates the uneven, cool look */
+    }
+}
+
+.project-card {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
