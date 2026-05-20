@@ -26,11 +26,15 @@
         class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-bold"
       >
         <a href="#intro" class="hover:opacity-50 transition">Home</a>
-
         <a href="#projects" class="hover:opacity-50 transition">projects</a>
         <a href="#identity" class="hover:opacity-50 transition">About</a>
         <a href="#services" class="hover:opacity-50 transition">Services</a>
         <a href="#experience" class="hover:opacity-50 transition">Skills</a>
+        <a
+          href="mailto:inyeneb2@gmail.com"
+          class="hover:text-red-500 transition font-black"
+          >Gmail</a
+        >
         <a href="#contact" class="hover:opacity-50 transition">Contact</a>
       </div>
 
@@ -43,18 +47,125 @@
       </button>
     </nav>
 
-    <section id="intro" class="h-screen flex items-center justify-center">
-      <div class="text-center">
+    <!-- Mobile Bottom Navigation (Icons) -->
+    <nav
+      class="fixed bottom-0 left-0 right-0 z-[100] md:hidden bg-white/90 dark:bg-black/90 backdrop-blur-lg border-t border-zinc-200 dark:border-zinc-800 py-3 px-6 shadow-[0_-5px_15px_rgba(0,0,0,0.1)]"
+    >
+      <div class="flex justify-around items-center">
+        <a
+          href="#intro"
+          class="flex flex-col items-center text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          <i data-lucide="home" class="w-5 h-5"></i>
+          <span class="text-[10px] mt-1 font-bold uppercase tracking-tighter"
+            >Home</span
+          >
+        </a>
+        <a
+          href="#projects"
+          class="flex flex-col items-center text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          <i data-lucide="layout-grid" class="w-5 h-5"></i>
+          <span class="text-[10px] mt-1 font-bold uppercase tracking-tighter"
+            >Projects</span
+          >
+        </a>
+        <a
+          href="#identity"
+          class="flex flex-col items-center text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          <i data-lucide="user" class="w-5 h-5"></i>
+          <span class="text-[10px] mt-1 font-bold uppercase tracking-tighter"
+            >About</span
+          >
+        </a>
+        <a
+          href="#services"
+          class="flex flex-col items-center text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          <i data-lucide="briefcase" class="w-5 h-5"></i>
+          <span class="text-[10px] mt-1 font-bold uppercase tracking-tighter"
+            >Services</span
+          >
+        </a>
+        <a
+          href="#experience"
+          class="flex flex-col items-center text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          <i data-lucide="cpu" class="w-5 h-5"></i>
+          <span class="text-[10px] mt-1 font-bold uppercase tracking-tighter"
+            >Skills</span
+          >
+        </a>
+        <a
+          href="mailto:inyeneb2@gmail.com"
+          class="flex flex-col items-center text-zinc-500 dark:text-zinc-400 hover:text-red-500 transition-colors"
+        >
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span class="text-[10px] mt-1 font-bold uppercase tracking-tighter"
+            >Gmail</span
+          >
+        </a>
+        <a
+          href="#contact"
+          class="flex flex-col items-center text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span class="text-[10px] mt-1 font-bold uppercase tracking-tighter"
+            >Contact</span
+          >
+        </a>
+      </div>
+    </nav>
+
+    <section
+      id="intro"
+      class="relative h-screen flex flex-col items-center justify-center overflow-hidden"
+    >
+      <!-- Full Image Background -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="Gemini_Generated_Image_dg9xfjdg9xfjdg9x.png"
+          alt="Background"
+          class="w-full h-full object-cover opacity-20 dark:opacity-10 grayscale"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white dark:via-black/40 dark:to-black"
+        ></div>
+      </div>
+
+      <div class="relative z-10 text-center flex flex-col items-center">
+        <!-- Profile Pic with Loader Border -->
+        <div class="relative mb-12 flex items-center justify-center">
+          <!-- Running Green Line Loader -->
+          <div
+            class="absolute w-[285px] h-[285px] rounded-full border-t-2 border-l-2 animate-loader-inner"
+          ></div>
+          <div
+            class="absolute w-[310px] h-[310px] rounded-full border-2 border-dashed animate-loader-outer"
+          ></div>
+
+          <!-- Image Container -->
+          <div
+            class="w-64 h-64 rounded-full overflow-hidden border-4 border-white dark:border-black relative z-10 portfolio-pic shadow-2xl"
+          >
+            <img
+              src="Gemini_Generated_Image_dg9xfjdg9xfjdg9x.png"
+              alt="Inyene Uko"
+              class="w-full h-full object-cover transition-all duration-700 hover:grayscale cursor-pointer"
+            />
+          </div>
+        </div>
+
         <h2
           class="reveal text-[8vw] font-black leading-none tracking-tighter uppercase italic"
         >
           Inyene uko
         </h2>
         <p
-          class="reveal-delay text-zinc-500 tracking-[0.5em] text-[10px] uppercase font-bold mt-4"
-        >
-          Crafting the future of web experiences
-        </p>
+          id="typing-text"
+          class="text-zinc-500 text-[20px] uppercase font-bold mt-6"
+        ></p>
       </div>
     </section>
 
@@ -104,70 +215,114 @@
             Services
           </h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hover:white-400"
+        >
           <div
-            class="reveal service-box p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group"
+            class="reveal service-card p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group transition-all duration-300 hover:bg-black hover:border-white/10 hover:shadow-lg hover:-translate-y-2 dark:hover:bg-white dark:hover:border-black/10 dark:hover:shadow-lg dark:hover:-translate-y-2"
           >
-            <i data-lucide="code-2" class="mb-6 w-8 h-8 opacity-50"></i>
-            <h3 class="text-xl font-bold italic tracking-tighter mb-4">
+            <i
+              data-lucide="code-2"
+              class="mb-6 w-8 h-8 opacity-50 group-hover:text-white dark:group-hover:text-black group-hover:opacity-100"
+            ></i>
+            <h3
+              class="text-xl font-bold italic tracking-tighter mb-4 group-hover:text-white dark:group-hover:text-black"
+            >
               Web Development
             </h3>
-            <p class="text-sm opacity-60">
+            <p
+              class="text-sm opacity-60 group-hover:text-white dark:group-hover:text-black"
+            >
               High-performance applications built with modern frameworks.
             </p>
           </div>
           <div
-            class="reveal service-box p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group lg:mt-8"
+            class="reveal service-card p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group lg:mt-8 transition-all duration-300 hover:bg-black hover:border-white/10 hover:shadow-lg hover:-translate-y-2 dark:hover:bg-white dark:hover:border-black/10 dark:hover:shadow-lg dark:hover:-translate-y-2"
           >
-            <i data-lucide="palette" class="mb-6 w-8 h-8 opacity-50"></i>
-            <h3 class="text-xl font-bold italic tracking-tighter mb-4">
+            <i
+              data-lucide="palette"
+              class="mb-6 w-8 h-8 opacity-50 group-hover:text-white dark:group-hover:text-black group-hover:opacity-100"
+            ></i>
+            <h3
+              class="text-xl font-bold italic tracking-tighter mb-4 group-hover:text-white dark:group-hover:text-black"
+            >
               UI/UX Design
             </h3>
-            <p class="text-sm opacity-60">
+            <p
+              class="text-sm opacity-60 group-hover:text-white dark:group-hover:text-black"
+            >
               Visual storytelling combined with intuitive user journeys.
             </p>
           </div>
           <div
-            class="reveal service-box p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group"
+            class="reveal service-card p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group transition-all duration-300 hover:bg-black hover:border-white/10 hover:shadow-lg hover:-translate-y-2 dark:hover:bg-white dark:hover:border-black/10 dark:hover:shadow-lg dark:hover:-translate-y-2"
           >
-            <i data-lucide="smartphone" class="mb-6 w-8 h-8 opacity-50"></i>
-            <h3 class="text-xl font-bold italic tracking-tighter mb-4">
+            <i
+              data-lucide="smartphone"
+              class="mb-6 w-8 h-8 opacity-50 group-hover:text-white dark:group-hover:text-black group-hover:opacity-100"
+            ></i>
+            <h3
+              class="text-xl font-bold italic tracking-tighter mb-4 group-hover:text-white dark:group-hover:text-black"
+            >
               Mobile Solutions
             </h3>
-            <p class="text-sm opacity-60">
+            <p
+              class="text-sm opacity-60 group-hover:text-white dark:group-hover:text-black"
+            >
               Seamless mobile experiences for iOS and Android.
             </p>
           </div>
           <div
-            class="reveal service-box p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group lg:-mt-8"
+            class="reveal service-card p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group lg:-mt-8 transition-all duration-300 hover:bg-black hover:border-white/10 hover:shadow-lg hover:-translate-y-2 dark:hover:bg-white dark:hover:border-black/10 dark:hover:shadow-lg dark:hover:-translate-y-2"
           >
-            <i data-lucide="film" class="mb-6 w-8 h-8 opacity-50"></i>
-            <h3 class="text-xl font-bold italic tracking-tighter mb-4">
+            <i
+              data-lucide="film"
+              class="mb-6 w-8 h-8 opacity-50 group-hover:text-white dark:group-hover:text-black group-hover:opacity-100"
+            ></i>
+            <h3
+              class="text-xl font-bold italic tracking-tighter mb-4 group-hover:text-white dark:group-hover:text-black"
+            >
               Motion Design
             </h3>
-            <p class="text-sm opacity-60">
+            <p
+              class="text-sm opacity-60 group-hover:text-white dark:group-hover:text-black"
+            >
               Bringing interfaces to life with smooth, purposeful motion.
             </p>
           </div>
           <div
-            class="reveal service-box p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group"
+            class="reveal service-card p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group transition-all duration-300 hover:bg-black hover:border-white/10 hover:shadow-lg hover:-translate-y-2 dark:hover:bg-white dark:hover:border-black/10 dark:hover:shadow-lg dark:hover:-translate-y-2"
           >
-            <i data-lucide="database" class="mb-6 w-8 h-8 opacity-50"></i>
-            <h3 class="text-xl font-bold italic tracking-tighter mb-4">
+            <i
+              data-lucide="database"
+              class="mb-6 w-8 h-8 opacity-50 group-hover:text-white dark:group-hover:text-black group-hover:opacity-100"
+            ></i>
+            <h3
+              class="text-xl font-bold italic tracking-tighter mb-4 group-hover:text-white dark:group-hover:text-black"
+            >
               Architecture
             </h3>
-            <p class="text-sm opacity-60">
+            <p
+              class="text-sm opacity-60 group-hover:text-white dark:group-hover:text-black"
+            >
               Deep backend structures designed for massive scale.
             </p>
           </div>
           <div
-            class="reveal service-box p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group lg:mt-8"
+            class="reveal service-card p-10 border border-zinc-200 dark:border-zinc-800 rounded-3xl group lg:mt-8 transition-all duration-300 hover:bg-black hover:border-white/10 hover:shadow-lg hover:-translate-y-2 dark:hover:bg-white dark:hover:border-black/10 dark:hover:shadow-lg dark:hover:-translate-y-2"
           >
-            <i data-lucide="bar-chart-3" class="mb-6 w-8 h-8 opacity-50"></i>
-            <h3 class="text-xl font-bold italic tracking-tighter mb-4">
+            <i
+              data-lucide="bar-chart-3"
+              class="mb-6 w-8 h-8 opacity-50 group-hover:text-white dark:group-hover:text-black group-hover:opacity-100"
+            ></i>
+            <h3
+              class="text-xl font-bold italic tracking-tighter mb-4 group-hover:text-white dark:group-hover:text-black"
+            >
               SEO Strategy
             </h3>
-            <p class="text-sm opacity-60">
+            <p
+              class="text-sm opacity-60 group-hover:text-white dark:group-hover:text-black"
+            >
               Data-driven optimization to ensure maximum reach.
             </p>
           </div>
@@ -203,9 +358,8 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <a
-            href="projects/movie-app/index.html"
-            class="reveal project-card group block relative overflow-hidden rounded-3xl bg-zinc-900 aspect-video"
+          <div
+            class="reveal project-card group relative overflow-hidden rounded-3xl bg-zinc-900 aspect-video"
           >
             <img
               src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2000&auto=format&fit=crop"
@@ -221,30 +375,62 @@
                   class="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest text-white uppercase"
                   >Entertainment</span
                 >
-                <i
-                  data-lucide="arrow-up-right"
-                  class="text-white opacity-0 group-hover:opacity-100 transition-opacity"
-                ></i>
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all"
+                    title="Source Code"
+                  >
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                  </a>
+                  <a
+                    href="https://cineflow001.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all"
+                    title="Live Demo"
+                  >
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3
-                  class="text-3xl font-black italic tracking-tighter text-white"
+              <div class="w-full">
+                <div class="flex justify-between items-end">
+                  <div>
+                    <h3
+                      class="text-3xl font-black italic tracking-tighter text-white"
+                    >
+                      CINEFLOW
+                    </h3>
+                    <p
+                      class="text-zinc-300 text-[10px] mt-2 uppercase tracking-widest font-bold"
+                    >
+                      Video Player • API Integration
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-[10px] text-green-400 font-mono font-bold">
+                      78% OPTIMIZED
+                    </p>
+                  </div>
+                </div>
+                <!-- Performance Rating Dashboard -->
+                <div
+                  class="mt-4 flex gap-1 h-[2px] w-full bg-white/10 rounded-full overflow-hidden"
                 >
-                  CINESTREAM
-                </h3>
-                <p class="text-zinc-300 text-xs mt-2 uppercase tracking-widest">
-                  Video Player • API Integration
-                </p>
+                  <div class="h-full bg-green-500 w-[98%]"></div>
+                </div>
               </div>
             </div>
             <div
               class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors"
             ></div>
-          </a>
+          </div>
 
-          <a
-            href="projects/boutique/index.html"
-            class="reveal project-card group block relative overflow-hidden rounded-3xl bg-zinc-900 aspect-video md:mt-20"
+          <div
+            class="reveal project-card group relative overflow-hidden rounded-3xl bg-zinc-900 aspect-video md:mt-20"
           >
             <img
               src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2000&auto=format&fit=crop"
@@ -260,30 +446,62 @@
                   class="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest text-white uppercase"
                   >E-Commerce</span
                 >
-                <i
-                  data-lucide="arrow-up-right"
-                  class="text-white opacity-0 group-hover:opacity-100 transition-opacity"
-                ></i>
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all"
+                    title="Source Code"
+                  >
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                  </a>
+                  <a
+                    href="https://idy-concepts.onrender.com/collection.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all"
+                    title="Live Demo"
+                  >
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3
-                  class="text-3xl font-black italic tracking-tighter text-white"
+              <div class="w-full">
+                <div class="flex justify-between items-end">
+                  <div>
+                    <h3
+                      class="text-3xl font-black italic tracking-tighter text-white"
+                    >
+                      IDY BOUTIQUE
+                    </h3>
+                    <p
+                      class="text-zinc-300 text-[10px] mt-2 uppercase tracking-widest font-bold"
+                    >
+                      Shopify Engine • Luxury UI
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-[10px] text-green-400 font-mono font-bold">
+                      56% OPTIMIZED
+                    </p>
+                  </div>
+                </div>
+                <!-- Performance Rating Dashboard -->
+                <div
+                  class="mt-4 flex gap-1 h-[2px] w-full bg-white/10 rounded-full overflow-hidden"
                 >
-                  IDY BOUTIQUE
-                </h3>
-                <p class="text-zinc-300 text-xs mt-2 uppercase tracking-widest">
-                  Shopify Engine • Luxury UI
-                </p>
+                  <div class="h-full bg-green-500 w-[98%]"></div>
+                </div>
               </div>
             </div>
             <div
               class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors"
             ></div>
-          </a>
+          </div>
 
-          <a
-            href="projects/dashboard/index.html"
-            class="reveal project-card group block relative overflow-hidden rounded-3xl bg-zinc-900 aspect-video"
+          <div
+            class="reveal project-card group relative overflow-hidden rounded-3xl bg-zinc-900 aspect-video"
           >
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop"
@@ -297,28 +515,61 @@
               <div class="flex justify-between items-start">
                 <span
                   class="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest text-white uppercase"
-                  >Dashboard</span
+                  >wealth-currency-converter</span
                 >
-                <i
-                  data-lucide="arrow-up-right"
-                  class="text-white opacity-0 group-hover:opacity-100 transition-opacity"
-                ></i>
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all"
+                    title="Source Code"
+                  >
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                  </a>
+                  <a
+                    href="https://wealth-currency-converter.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-white/10 rounded-full text-white hover:bg-white/20 transition-all"
+                    title="Live Demo"
+                  >
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </a>
+                </div>
               </div>
-              <div>
-                <h3
-                  class="text-3xl font-black italic tracking-tighter text-white"
+              <div class="w-full">
+                <div class="flex justify-between items-end">
+                  <div>
+                    <h3
+                      class="text-3xl font-black italic tracking-tighter text-white"
+                    >
+                      currency converter
+                    </h3>
+                    <p
+                      class="text-zinc-300 text-[10px] mt-2 uppercase tracking-widest font-bold"
+                    >
+                      Data Visualization • Auth
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <p class="text-[10px] text-green-400 font-mono font-bold">
+                      98% OPTIMIZED
+                    </p>
+                  </div>
+                </div>
+                <!-- Performance Rating Dashboard -->
+                <div
+                  class="mt-4 flex gap-1 h-[2px] w-full bg-white/10 rounded-full overflow-hidden"
                 >
-                  CORE ADMIN
-                </h3>
-                <p class="text-zinc-300 text-xs mt-2 uppercase tracking-widest">
-                  Data Visualization • Auth
-                </p>
+                  <div class="h-full bg-green-500 w-[98%]"></div>
+                </div>
               </div>
             </div>
             <div
               class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors"
             ></div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
@@ -338,14 +589,22 @@
             <span class="text-2xl font-black italic tracking-tighter">HTML</span
             ><span class="text-xs font-mono counter">0%</span>
           </div>
-          <div class="skill-track"><div class="skill-bar"></div></div>
+          <div
+            class="h-[2px] w-full bg-zinc-200 dark:bg-white/10 rounded-full overflow-hidden"
+          >
+            <div class="skill-bar h-full bg-green-500 w-0"></div>
+          </div>
         </div>
         <div class="reveal skill-item group" data-percent="95">
           <div class="flex justify-between items-end mb-3">
             <span class="text-2xl font-black italic tracking-tighter">CSS</span
             ><span class="text-xs font-mono counter">0%</span>
           </div>
-          <div class="skill-track"><div class="skill-bar"></div></div>
+          <div
+            class="h-[2px] w-full bg-zinc-200 dark:bg-white/10 rounded-full overflow-hidden"
+          >
+            <div class="skill-bar h-full bg-green-500 w-0"></div>
+          </div>
         </div>
         <div class="reveal skill-item group" data-percent="92">
           <div class="flex justify-between items-end mb-3">
@@ -353,7 +612,11 @@
               >JAVASCRIPT </span
             ><span class="text-xs font-mono counter">0%</span>
           </div>
-          <div class="skill-track"><div class="skill-bar"></div></div>
+          <div
+            class="h-[2px] w-full bg-zinc-200 dark:bg-white/10 rounded-full overflow-hidden"
+          >
+            <div class="skill-bar h-full bg-green-500 w-0"></div>
+          </div>
         </div>
         <div class="reveal skill-item group" data-percent="73">
           <div class="flex justify-between items-end mb-3">
@@ -361,7 +624,23 @@
               >TYPESCRIPT</span
             ><span class="text-xs font-mono counter">0%</span>
           </div>
-          <div class="skill-track"><div class="skill-bar"></div></div>
+          <div
+            class="h-[2px] w-full bg-zinc-200 dark:bg-white/10 rounded-full overflow-hidden"
+          >
+            <div class="skill-bar h-full bg-green-500 w-0"></div>
+          </div>
+        </div>
+        <div class="reveal skill-item group" data-percent="54">
+          <div class="flex justify-between items-end mb-3">
+            <span class="text-2xl font-black italic tracking-tighter"
+              >REACT</span
+            ><span class="text-xs font-mono counter">0%</span>
+          </div>
+          <div
+            class="h-[2px] w-full bg-zinc-200 dark:bg-white/10 rounded-full overflow-hidden"
+          >
+            <div class="skill-bar h-full bg-green-500 w-0"></div>
+          </div>
         </div>
 
         <div
@@ -392,6 +671,12 @@
             placeholder="SUBJECT"
             class="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 p-4 outline-none focus:border-black dark:focus:border-white transition"
           />
+          <input
+            type="email"
+            id="email-id"
+            placeholder="SEND AN EMAIL"
+            class="w-full bg-transparent border-b border-zinc-300 dark:border-zinc-800 p-4 outline-none focus:border-black dark:focus:border-white transition"
+          />
           <textarea
             id="wa-message"
             placeholder="YOUR MESSAGE"
@@ -403,6 +688,12 @@
             class="w-full bg-green-600 text-white py-5 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-green-500 transition"
           >
             Open WhatsApp Chat
+          </button>
+          <button
+            onclick="sendEmail()"
+            class="w-full border border-zinc-300 dark:border-zinc-800 text-black dark:text-white py-5 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-zinc-100 dark:hover:bg-zinc-900 transition"
+          >
+            send an email
           </button>
         </div>
       </div>
